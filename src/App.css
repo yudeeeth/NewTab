@@ -1,0 +1,27 @@
+* [theme='dark']{
+  /* --background-color: rgb(36, 40, 47);
+  --primary-color: aqua;
+  --secondary-color: rgb(36, 40, 47);
+  --secondary-color-light: rgb(49, 54, 62); */
+  /* ["615568","5a5361","555158","4f4e4f","474a4a"] */
+  --bg:rgb(36, 40, 47);
+  --bg-light:#544770;
+  --bg-dark: #1d1f38;
+  --buttons:#6eddec;
+  --highlight:#8149ba;
+  --semantic-red:rgb(185, 69, 43);
+  --semantic-green:rgb(36, 138, 78);
+  --semantic-blue:rgb(83, 106, 195);
+  --semantic-yellow:rgb(235, 224, 105);
+  --neutral-white:rgb(218, 221, 237);
+  --neutral-grey:rgb(54, 58, 73);
+  --neutral-black:rgb(12, 17, 21);
+}
+
+.main{
+  height: 100%;
+  background: var(--bg);
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
