@@ -3,11 +3,23 @@ import './typebar.css'
 import execute from './util'
 
 const Typebar = (props)=>{
-  const [inpText,setInpText] = React.useState("")
+
+  const clearinput = ()=>{
+    props.inputRef.current.value = "";
+  }
   const handleKey = (e)=>{
-    setInpText(e.target.value);
     if(e.code==='Enter'){
-      execute(inpText);
+      let out = execute(props.inputRef.current.value,clearinput,props.setShowHints);
+      if(out !== undefined || out !== null){
+        //preprocess out
+        let hints = [];
+        for(let key in out){
+          hints.push({title:key,content:out[key]});
+        }
+        // console.log(hints);
+        props.setShowHints(true);
+        props.setHints(hints);
+      }
     }
   }
 
